@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en"> 
+ <head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Mishra Family</title> 
+  <link rel="stylesheet" href="styles.css"> 
+ <style type="text/css" id="dcoder_stylesheet">body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    background: #4CAF50;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+nav a {
+    margin: 0 15px;
+    color: white;
+    text-decoration: none;
+}
+
+section {
+    padding: 20px;
+    margin: 10px auto;
+    max-width: 800px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.gallery img {
+    width: 30%;
+    margin: 5px;
+    border-radius: 8px;
+}
+
+textarea {
+    width: 100%;
+    height: 100px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button {
+    background: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #4CAF50;
+    color: white;
+}</style></head> 
+ <body> 
+  <header> 
+   <h1>Welcome to the Mishra Family Website</h1> 
+   <nav> <a href="#home">Home</a> <a href="#gallery">Gallery</a> <a href="#calendar">Events</a> <a href="#forum">Discussion</a> <a href="#contact">Contact</a> 
+   </nav> 
+  </header> 
+  <section id="home"> 
+   <h2>Family News &amp; Updates</h2> 
+   <p>Welcome to the Mishra family communication hub. Stay connected and share your moments here!</p> 
+  </section> 
+  <section id="gallery"> 
+   <h2>Photo Gallery</h2> 
+   <div class="gallery"> 
+    <img src="image1.jpg" alt="Family Photo 1"> 
+    <img src="image2.jpg" alt="Family Photo 2"> 
+    <img src="image3.jpg" alt="Family Photo 3"> 
+   </div> 
+  </section> 
+  <section id="calendar"> 
+   <h2>Events &amp; Birthdays</h2> 
+   <ul> 
+    <li>January 1: New Year Celebration</li> 
+    <li>dec 19 : mukti's Birthday</li> 
+   </ul> 
+  </section> 
+  <section id="forum"> 
+   <h2>Family Discussion Forum</h2> <textarea id="commentBox" placeholder="Share your thoughts..."></textarea> <button onclick="postComment()">Post</button> 
+   <div id="comments"></div> 
+  </section> 
+  <section id="contact"> 
+   <h2>Contact</h2> 
+   <p>Email: family@mishra.com</p> 
+   <p>Phone: +91-9439415863</p> 
+  </section> 
+  <footer> 
+   <p>© 2024 Mishra Family. All Rights Reserved.</p> 
+  </footer> 
+  <script src="script.js"></script> 
+ 
+<script type="text/javascript" id="dcoder_script">function postComment() {
+    const commentBox = document.getElementById("commentBox");
+    const commentsDiv = document.getElementById("comments");
+
+    if (commentBox.value.trim() !== "") {
+        const newComment = document.createElement("p");
+        newComment.textContent = commentBox.value;
+        commentsDiv.appendChild(newComment);
+        commentBox.value = ""; // Clear the text box
+    } else {
+        alert("Please write a comment before posting.");
+    }
+}</script></body></html>
